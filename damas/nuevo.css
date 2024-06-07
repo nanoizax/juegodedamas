@@ -1,0 +1,55 @@
+.contenedor{
+        text-align: center;
+        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+
+.nav-item-pers{
+        padding-left:1rem ;
+}
+
+
+li.nav-item.nav-item-pers:hover {
+    background: #efefef;
+    transition: background 0.5s, transform 0.2s;
+    transform: scale(1.03);
+}
+
+
+.sala{
+
+
+
+    display: flex;
+    justify-content: space-between !important;
+    padding: 0.5rem !important;
+    box-shadow: 1px 1px 5px 2px #d2cdcd;
+    border-radius: 0.5rem;
+
+}
+
+
+.container_salas{
+    
+    max-height: 40vh;
+    overflow-y: auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+[aria-controls^="flush-collapseOne-participando"].accordion-button:not(.collapsed) {
+    background: #f2f2f2;
+}
+
+[data-accion="participar"]:hover:not([readonly]) {
+    background: aliceblue;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}

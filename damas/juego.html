@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es" manifest="damas.manifest">
+
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<title>Damas inglesas</title>
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="stylesheet" href="nuevo.css">
+	<link rel="stylesheet" href="./lib/bootstrap-5.3.3-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="./lib/izitoast/iziToast.min.css">
+	<script src="juego_entrega_1.js"></script>
+	<script src="general_functions.js"></script>
+	<!-- <script src="./lib/jquery-ui-1.13.3/jquery-ui.js"></script> -->
+	<script src="./lib/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+
+	<script src="./lib/izitoast/iziToast.min.js"></script>
+	<script src="./lib/jquery-ui-1.13.3/external/jquery/jquery.js"></script>
+	<script src="./socket.io.min.js"></script>
+	<script src="v2.js"></script>
+
+
+	<!-- <script src="./lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script> -->
+</head>
+
+<style>
+	.contenedor-soplar-mover>ul>li {
+		margin-top: 0.2rem;
+	}
+
+	.contenedor-soplar-mover>ul>li:hover {
+		background-color: #80808014;
+		cursor: pointer;
+	}
+
+	#lienzo {
+		border: 0.2rem solid #01ffa8;
+		border-radius: 1rem;
+		animation: example 3s infinite;
+	}
+
+	@keyframes example {
+		0% {
+			border-color: #01ffa8;
+		}
+
+		50% {
+			border-color: #a9a928;
+		}
+
+		100% {
+			border-color: #01ffa8;
+		}
+
+	}
+</style>
+
+<body>
+	<div style="display: none;">
+
+
+		<audio controls id="coronasound">
+			<source src="corona.mp3" type="audio/ogg">
+		</audio>
+		<audio controls id="comidasound">
+			<source src="comida.mp3" type="audio/ogg">
+		</audio>
+		<audio controls id="movidasound">
+			<source src="movida.mp3" type="audio/ogg">
+		</audio>
+		<audio controls id="soplarsound">
+			<source src="soplar.mp3" type="audio/ogg">
+		</audio>
+		<audio controls id="turnochangesound">
+			<source src="turnochange.mp3" type="audio/ogg">
+		</audio>
+	</div>
+	<div class="contenedor-soplar-mover"
+		style="display:none; position:absolute;margin: auto;top: 50vh;left: 44vw;z-index: 1111;background: white;padding: 0.3rem 1rem;border-radius: 0.5rem;box-shadow: 1px 1px gray;text-align: center;">
+		<ul style="padding: 0;text-align: center;">
+			<li style="list-style: none;padding: 0.5rem;" id="itemSoplar" onclick="FnitemSopla()">Soplar</li>
+			<li style="list-style: none;padding: 0.5rem;" id="itemMover" onclick="FnitemMover()">Mover</li>
+		</ul>
+	</div>
+
+
+	<nav class="navbar bg-body-tertiary fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Juego de Damas Sr Wilmer
+			</a>
+			<div class="col-4 sala-contianer-toggler" style="display: none;background: white;box-shadow: 0px 0px 20px 2px #1564d95e;border-radius: 0.5rem;border: 1px dashed #80808052;">
+				<div class="d-flex flex-column">
+					
+					<div class="d-flex justify-content-center">
+						<div class="align-items-center d-flex gap-3 justify-content-center text-center" style="
+padding: 0.5rem;
+border-radius: 0.5rem;
+border: 2px solid white;
+background: #1564d9;
+">
+							<span class="text-center sala-usuario-blanca" style="
+font-weight: bold;
+font-family: sans-serif;
+padding: 0.2rem;
+color: white;
+">usuario negra</span>
+							<small class="text-center sala-actual-activa-blanca-win-count" style="font-size: large;background: #0dcaf0;padding: 0.2rem 0.7rem;border-radius: 1rem;font-weight: bold;color: white;">0</small>
+						</div>
+
+						<strong class="m-auto">Sala (<span class="sala-actual-activa-nombre">Inactiva</span>)  #<span class="sala-actual-activa-numero">2</span></strong>
+						<div class="align-items-center d-flex gap-3 justify-content-center text-center" style="
+padding: 0.5rem;
+border-radius: 0.5rem;
+border: 2px solid white;
+background: #1564d9;
+">
+							<span class="text-center sala-usuario-negra" style="
+font-weight: bold;
+font-family: sans-serif;
+padding: 0.2rem;
+color: white;
+">usuario negra</span>
+							<small class="text-center  sala-actual-activa-negra-win-count" style="font-size: large;background: #0dcaf0;padding: 0.2rem 0.7rem;border-radius: 1rem;font-weight: bold;color: white;">0</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="align-items-center d-flex gap-3">
+				<div class="stado-usuario" style="display: none;">
+					<div class=" d-flex justify-content-center gap-2 ">
+						<strong>Bienvenido:</strong>
+						<span id="nombre_usuario_session"></span>
+
+					</div>
+				</div>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+				aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+
+
+
+
+
+						<li class="nav-item nav-item-pers ">
+							<a class="nav-link" href="#" id="resetButton">Nueva partida</a>
+						</li>
+
+						<li class="nav-item  nav-item-pers">
+							<a class="nav-link" href="#" id="loadButton">Cargar partida</a>
+						</li>
+
+						<li class="nav-item nav-item-pers">
+							<a class="nav-link" href="#" id="saveButton">Guardar partida</a>
+						</li>
+						<li class="nav-item nav-item-pers">
+							<a class="nav-link" href="#" id="cerrarSesion">Cerrar Sesión</a>
+						</li>
+
+
+						<li class="nav-item">
+							<div class="accordion accordion-flush" id="accordionFlushExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" id="iniciarSesion" type="button"
+											data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+											aria-expanded="false" aria-controls="flush-collapseOne">
+											Iniciar Sesión
+										</button>
+									</h2>
+									<div id="flush-collapseOne" class="accordion-collapse collapse"
+										data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+
+
+											<div class="p-1 d-flex flex-column">
+
+												<div class="form-floating mb-3">
+													<input type="usuario" class="form-control" name="ing_usuario"
+														id="floatingInput" placeholder="name@example.com">
+													<label for="floatingInput">Usuario</label>
+												</div>
+												<div class="form-floating">
+													<input type="password" class="form-control" name="ing_contrasena"
+														id="floatingPassword" placeholder="Password">
+													<label for="floatingPassword">Contraseña</label>
+												</div>
+												<div class="d-flex justify-content-end p-2">
+													<button type="button" class="btn btn-secondary"
+														id="ing_button">Ingresar</button>
+												</div>
+
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</li>
+
+						<li class="nav-item">
+							<div class="accordion accordion-flush" id="accordionFlushExampleInserSala">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" id="" type="button"
+											data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-RegistroSala"
+											aria-expanded="false" aria-controls="flush-collapseOne-RegistroSala">
+											Registrar Sala
+										</button>
+									</h2>
+									<div id="flush-collapseOne-RegistroSala" class="accordion-collapse collapse"
+										data-bs-parent="#accordionFlushExampleInserSala">
+										<div class="accordion-body">
+
+
+											<div class="p-1 d-flex flex-column">
+
+												<div class="form-floating mb-3">
+													<input type="text" class="form-control" name="ing_sala_nombre"
+														id="floatingInput" placeholder="nombre sala">
+													<label for="floatingInput">Nombre sala</label>
+												</div>
+
+
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="colorsala"
+														id="damablanca" value="blanca">
+													<label class="form-check-label" for="damablanca">Blanca</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="colorsala"
+														id="damanegra" value="negra">
+													<label class="form-check-label" for="damanegra">Negra</label>
+												</div>
+
+
+
+												<div class="d-flex justify-content-end p-2">
+													<button type="button" class="btn btn-secondary"
+														id="ing_sala_registro">Registro</button>
+												</div>
+
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</li>
+
+						<li class="nav-item">
+							<div class="accordion accordion-flush" id="accordionFlushExampleCheckSala">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" id="checksalas" type="button"
+											data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-checkSala"
+											aria-expanded="false" aria-controls="flush-collapseOne-checkSala">
+											Salas
+										</button>
+									</h2>
+									<div id="flush-collapseOne-checkSala" class="accordion-collapse collapse"
+										data-bs-parent="#accordionFlushExampleCheckSala">
+										<div class="accordion-body container_salas">
+
+											<!-- auqi las salas  -->
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</li>
+
+
+
+						<li class="nav-item">
+							<div class="accordion accordion-flush" id="accordionFlushExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" id="iniciarSesion" type="button"
+											data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2"
+											aria-expanded="false" aria-controls="flush-collapseOne2">
+											Registrar Usuario
+										</button>
+									</h2>
+									<div id="flush-collapseOne2" class="accordion-collapse collapse"
+										data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+
+
+											<div class="p-1 d-flex flex-column">
+
+												<div class="form-floating mb-3">
+													<input type="text" class="form-control" name="reg_usuario"
+														id="reg_usuario" placeholder="name@example.com">
+													<label for="floatingInput">Usuario</label>
+												</div>
+												<div class="form-floating">
+													<input type="password" class="form-control" name="reg_password"
+														id="reg_password" placeholder="Password">
+													<label for="floatingPassword">Contraseña</label>
+												</div>
+												<div class="d-flex justify-content-end p-2">
+													<button type="button" class="btn btn-secondary"
+														id="reg_user">Registrar</button>
+												</div>
+
+											</div>
+
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</li>
+
+
+					</ul>
+					<!-- <form class="d-flex mt-3" role="search">
+			<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success" type="submit">Search</button>
+		  </form> -->
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<div class="contenedor container-fluid">
+	
+
+		
+		<div class="d-flex justify-content-center " >
+			<div class="col-6 d-flex flex-column">
+
+				<div class="align-items-center col-6 d-flex gap-4 justify-content-center m-auto" style="
+				background: #1d4365;
+				border-radius: 2rem 2rem 0 0;
+			">
+					<p id="esTurno" style=" font-weight: bold;  border-radius:0 !important;margin:auto !important;  color: black; box-shadow: gray 1px 1px;">Empiezan Blancas: </p>
+					<p id="movimientos" style="margin:auto !important;color: white;">Movimientos: <span id="count">0</span></p>
+				</div>
+				<canvas id="lienzo" width="600" height="300"></canvas>
+
+			</div>
+		<div class="col-4" style="display:flex;flex-direction: column;justify-content: center;gap:0.5rem;align-items: center;">
+			
+
+
+			<div class="container_contador"
+				style=" display:none;opacity: 0;   border: 3px solid white;display: flex;justify-content:  center;flex-direction: column;align-items: center;padding: 0.5rem;background: #0056b3;border-radius: 0.5rem;font-weight: 700;color: white;box-shadow: 1px 1px 7px white;">
+
+				<div
+					style="display: flex;justify-content:  center;flex-direction: column;align-items: center;border-radius: 0.5rem;">
+
+					<div style="display: flex;width: 100%;justify-content: space-evenly;">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:1rem ;color:white ">
+
+							<path style="fill:#7cd691"
+								d="M432 304c0 114.9-93.1 208-208 208S16 418.9 16 304c0-104 76.3-190.2 176-205.5V64h-28c-6.6 0-12-5.4-12-12V12c0-6.6 5.4-12 12-12h120c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-28v34.5c37.5 5.8 71.7 21.6 99.7 44.6l27.5-27.5c4.7-4.7 12.3-4.7 17 0l28.3 28.3c4.7 4.7 4.7 12.3 0 17l-29.4 29.4-.6 .6C419.7 223.3 432 262.2 432 304zm-176 36V188.5c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12V340c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12z" />
+						</svg>
+
+						<span id="tiempoRestante">0 </span>
+					</div>
+					<span>Segundos </span>
+				</div>
+			</div>
+			<input type="button" id="changeTurn" value="Cambiar Turno" onclick="cambioTurno(); ">
+		</div>
+	
+	</div>
+		<!-- <br><br> -->
+		<!-- <input type="button" id="resetButton" value="Nueva partida">
+		<input type="button" id="loadButton" value="Cargar partida">
+		<input type="button" id="saveButton" value="Guardar partida">
+	 -->
+		<div style="display: none;">
+
+
+			<label for="empateButton">Pulsar para finalizar el juego de mutuo acuerdo* : </label>
+			<input type="button" id="empateButton" value="Tablas">
+			<p> *: Necesita la confirmaci&oacute;n del oponente. </p>
+			<div id="moveBlancas">
+				<h3>Blancas</h3>
+			</div>
+			<div id="moveNegras">
+				<h3>Negras</h3>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		iniciarJuego(document.getElementById('lienzo'), document.getElementById('count'));
+	</script>
+</body>
+
+</html>

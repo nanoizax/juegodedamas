@@ -1,0 +1,19 @@
+{
+  "name": "damas_back",
+  "version": "1.0.0",
+  "description": "damas ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "carlos luiggy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.5",
+    "socket.io": "^4.7.5",
+    "winston": "^3.13.0"
+  }
+}

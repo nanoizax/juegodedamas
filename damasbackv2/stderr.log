@@ -1,0 +1,933 @@
+hola/home/tajikfsv/public_html/damasbackv2/index.js:21
+  throw new Error('Data written successfully to disk');
+  ^
+
+Error: Data written successfully to disk
+    at /home/tajikfsv/public_html/damasbackv2/index.js:21:9
+    at FSReqCallback.oncomplete (fs.js:180:23)
+[winston] Unknown logger level: undefined
+{"level":"info","message":"Hello distributed log files!","service":"user-service"}
+/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/winston/lib/winston/logger.js:214
+      level[LEVEL] = level.level;
+                   ^
+
+TypeError: Cannot create property 'Symbol(level)' on string 'todo bien'
+    at DerivedLogger.log (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/winston/lib/winston/logger.js:214:20)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:25:8)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/winston/lib/winston/logger.js:214
+      level[LEVEL] = level.level;
+                   ^
+
+TypeError: Cannot create property 'Symbol(level)' on string 'todo bien'
+    at DerivedLogger.log (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/winston/lib/winston/logger.js:214:20)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:25:8)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+{"level":"info","message":"INICIO","service":"user-service"}
+{"level":"info","message":"INICIO","service":"user-service"}
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:37:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:37:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:37:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:37:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:37:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+{"level":"info","message":"INICIO","service":"user-service"}
+{"level":"info","message":"escuchando api 3000!","service":"user-service"}
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:37:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:37:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:33:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:33:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+{"level":"info","message":"INICIO","service":"user-service"}
+{"level":"info","message":"escuchando api 3000!","service":"user-service"}
+{"level":"info","message":"INICIO","service":"user-service"}
+{"level":"info","message":"escuchando socket 3001!","service":"user-service"}
+{"level":"info","message":"escuchando api 3000!","service":"user-service"}
+/home/tajikfsv/public_html/damasbackv2/index.js:20
+  format: combine(
+          ^
+
+ReferenceError: combine is not defined
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:20:11)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+/home/tajikfsv/public_html/damasbackv2/index.js:20
+  format: combine(
+          ^
+
+ReferenceError: combine is not defined
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:20:11)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2024-05-05T23:37:19.447Z'
+}
+{
+  level: 'info',
+  message: 'escuchando socket 3001!',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2024-05-05T23:37:19.608Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2024-05-05T23:37:19.610Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2024-05-05T23:38:27.462Z'
+}
+{
+  level: 'info',
+  message: 'escuchando socket 3001!',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2024-05-05T23:38:27.629Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2024-05-05T23:38:27.631Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:40:18.901Z'
+}
+{
+  level: 'info',
+  message: 'escuchando socket 3001!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:40:19.069Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:40:19.071Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:52:42.098Z'
+}
+{
+  level: 'info',
+  message: 'escuchando socket 3001!45505',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:52:42.267Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:52:42.269Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:53:39.856Z'
+}
+{
+  level: 'info',
+  message: 'escuchando socket 45505! ',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:53:40.027Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-05T23:53:40.029Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T00:08:30.506Z'
+}
+{
+  level: 'info',
+  message: 'escuchando socket 3001![object Object]',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T00:08:30.671Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T00:08:30.673Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T00:09:17.756Z'
+}
+{
+  level: 'info',
+  message: 'escuchando socket 3001!{"address":"::","family":"IPv6","port":45505}',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T00:09:17.924Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T00:09:17.926Z'
+}
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:49:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:49:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:49:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:49:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:42:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:42:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:42:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+/usr/local/lsws/fcgi-bin/lsnode.js:68
+        throw new Error("http.Server.listen() was called more than once " +
+        ^
+
+Error: http.Server.listen() was called more than once which is not allowed.
+    at Server.customListen [as listen] (/usr/local/lsws/fcgi-bin/lsnode.js:68:15)
+    at Function.listen (/home/tajikfsv/nodevenv/public_html/damasbackv2/14/lib/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/tajikfsv/public_html/damasbackv2/index.js:42:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T00:57:41.993Z'
+}
+{ level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T00:59:49.968Z' }
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T01:03:12.008Z'
+}
+{ level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T01:06:19.350Z' }
+{ level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T01:08:45.038Z' }
+{ level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T01:09:31.626Z' }
+{ level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T01:20:10.551Z' }
+{ level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T01:20:49.270Z' }
+{ level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T02:00:30.636Z' }
+{ level: 'info',
+  message: 'escuchando api 3001!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T02:00:30.810Z' }
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T02:01:48.639Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T02:01:48.813Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T02:16:22.623Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T02:16:44.708Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T02:27:24.227Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-06T02:27:24.444Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T21:47:09.177Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T21:47:09.321Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T21:48:53.880Z'
+}
+{
+  level: 'info',
+  message: 'escuchando api 3000!',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T21:48:54.063Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T21:49:54.089Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T21:57:17.369Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T22:35:50.385Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T22:44:09.369Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T22:47:31.393Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T22:47:50.599Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T22:51:38.513Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:26:13.965Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:27:17.439Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:27:51.124Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:30:23.903Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:30:39.813Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:31:13.304Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:31:21.992Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:31:55.863Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:32:04.666Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:32:22.845Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:33:09.740Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:33:22.339Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:33:40.194Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:34:10.047Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:34:17.807Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:35:58.928Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:36:14.321Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:45:13.524Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:49:14.535Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:59:12.157Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-13T23:59:50.629Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T00:29:16.057Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T00:30:36.260Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:11:59.934Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:19:45.198Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:34:22.984Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:43:15.516Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:43:46.790Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:44:20.509Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:45:37.713Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:46:06.694Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T01:51:42.251Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T02:26:19.857Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-14T02:50:10.637Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-17T11:54:47.953Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-20T03:15:42.086Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-20T05:55:26.915Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-20T06:16:48.326Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-20T06:22:41.647Z'
+}
+{
+  level: 'info',
+  message: 'INICIO',
+  service: 'user-service',
+  label: 'Salida de Ing.Carlos Luiggy ',
+  timestamp: '2024-05-20T06:23:33.236Z'
+}
